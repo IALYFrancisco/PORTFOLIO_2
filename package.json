@@ -4,7 +4,8 @@
   "description": "Ceci est un PORTFOLIO que j'ai codé avec SASS, JAVASCRIPT, HTML et CSS, c'est un projet d'étude.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass":"sass style.scss ./css/style.css --watch"
   },
   "author": "IALY Francisco Raymond",
   "license": "ISC",
