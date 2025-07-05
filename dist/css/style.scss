@@ -27,18 +27,13 @@ body {
 
     .first {
         background: url('../assets/img/circle-scatter-haikei.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
 
             header {
                 width: 100%;
                 max-width: 1320px;
-                background-color: red;
                 margin: auto;
-        
-                svg {
-                    position: absolute;
-                    z-index: -1;
-                    top: 0;
-                }
         
                 img.img {
                     width: 150px;

@@ -23,17 +23,13 @@ body {
 }
 body .first {
   background: url("../assets/img/circle-scatter-haikei.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 body .first header {
   width: 100%;
   max-width: 1320px;
-  background-color: red;
   margin: auto;
-}
-body .first header svg {
-  position: absolute;
-  z-index: -1;
-  top: 0;
 }
 body .first header img.img, body .first header img.img-3, body .first header img.img-2, body .first header img.img-1 {
   width: 150px;
