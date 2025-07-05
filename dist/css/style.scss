@@ -1,6 +1,11 @@
 @font-face {
     font-family: puce-font;
-    src: url("/assets/font/scripto-font/Scripto-2OR2v.ttf");
+    src: url("./assets/fonts/scripto-font/Scripto-2OR2v.ttf");
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("./assets/fonts/Poppins-Regular.ttf");
 }
 
 $puce-color: #FBAE3C;
@@ -214,7 +219,7 @@ body {
     }
 
     footer {
-        background: url(/assets/img/wave.svg);
+        background: url("./assets/img/wave.svg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 0 -540px;
