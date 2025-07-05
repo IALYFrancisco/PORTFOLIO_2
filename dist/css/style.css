@@ -178,7 +178,7 @@ body .technologies div.box div.image {
   justify-content: center;
 }
 body footer {
-  background: url("./assets/img/wave.svg");
+  background: url("../assets/img/wave.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 -540px;
