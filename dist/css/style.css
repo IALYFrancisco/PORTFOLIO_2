@@ -21,47 +21,51 @@ body {
   width: 100%;
   background: #001220;
 }
-body .first {
+body main {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+body main .first {
   background: url("../assets/img/circle-scatter-haikei.svg");
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 80px;
 }
-body .first header {
+body main .first header {
   width: 100%;
-  max-width: 1320px;
   margin: auto;
 }
-body .first header section {
+body main .first header section {
   margin-top: 75px;
   display: flex;
   justify-content: space-between;
 }
-body .first header section section {
+body main .first header section section {
   width: 30%;
   position: relative;
   margin: 0;
 }
-body .first header section section .img, body .first header section section .img-3, body .first header section section .img-2, body .first header section section .img-1 {
+body main .first header section section .img, body main .first header section section .img-3, body main .first header section section .img-2, body main .first header section section .img-1 {
   width: 150px;
   border-radius: 5px;
   position: absolute;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1176470588);
 }
-body .first header section section .img-1 {
+body main .first header section section .img-1 {
   animation: agitation-1 3s ease infinite;
 }
-body .first header section section .img-2 {
+body main .first header section section .img-2 {
   top: 100px;
   left: 200px;
   animation: agitation-2 3s ease infinite;
 }
-body .first header section section .img-3 {
+body main .first header section section .img-3 {
   top: 250px;
   left: 200px;
   animation: agitation-3 2.5s ease infinite;
 }
-body .first header .wai {
+body main .first header .wai {
   width: 60%;
   border: #FBAE3C solid 2px;
   backdrop-filter: blur(10px);
@@ -70,45 +74,45 @@ body .first header .wai {
   padding: 30px;
   text-align: justify;
 }
-body .first header .wai .title {
+body main .first header .wai .title {
   color: white;
   font-size: 40px;
 }
-body .first header .wai .title span.puce-nombre {
+body main .first header .wai .title span.puce-nombre {
   color: #FBAE3C;
   font-family: puce-font;
   margin-right: 20px;
 }
-body .first header .wai p.text {
+body main .first header .wai p.text {
   color: white;
 }
-body .first header .wai p.signature {
+body main .first header .wai p.signature {
   color: #FBAE3C;
   font-family: Poppins;
   float: right;
   font-size: 25px;
   margin-top: 20px;
 }
-body .first header nav {
+body main .first header nav {
   width: 100%;
   height: 70px;
   display: flex;
   justify-content: flex-end;
 }
-body .first header nav ul {
+body main .first header nav ul {
   width: 40%;
   height: inherit;
   display: flex;
   align-items: center;
   justify-content: end;
   list-style-type: none;
-  column-gap: 15%;
+  column-gap: 8%;
 }
-body .first header nav ul li a {
+body main .first header nav ul li a {
   text-decoration: none;
   color: white;
 }
-body .first header nav ul li a span.puce-nombre {
+body main .first header nav ul li a span.puce-nombre {
   color: #FBAE3C;
   margin-right: 5px;
   font-family: puce-font;
@@ -116,15 +120,16 @@ body .first header nav ul li a span.puce-nombre {
 }
 body .technologies {
   width: 100%;
-  margin-top: 400px;
+  margin-top: 200px;
   background-image: url("../assets/img/polygon-scatter-haikei.svg");
-  padding-left: 200px;
-  padding-right: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0 200px 53px 200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-body .technologies p.title {
+body .technologies .title {
   color: white;
   font-size: 40px;
   width: 100%;
@@ -132,7 +137,7 @@ body .technologies p.title {
   justify-content: center;
   margin-bottom: 60px;
 }
-body .technologies p.title span.puce-nombre {
+body .technologies .title span.puce-nombre {
   color: #FBAE3C;
   font-family: puce-font;
   margin-right: 20px;

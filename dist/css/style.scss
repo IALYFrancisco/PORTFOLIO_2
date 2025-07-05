@@ -25,136 +25,143 @@ body {
     width: 100%;
     background: #001220;
 
-    .first {
-        background: url('../assets/img/circle-scatter-haikei.svg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        padding-bottom: 80px;
+    main {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
 
-            header {
-                width: 100%;
-                max-width: 1320px;
-                margin: auto;
-                
-                section {
-                    margin-top: 75px;
-                    display: flex;
-                    justify-content: space-between;
-
-                    section {
-                        width: 30%;
-                        position: relative;
-                        margin: 0;
-                        
-                        .img {
-                            width: 150px;
-                            border-radius: 5px;
-                            position: absolute;
-                            box-shadow: 10px 10px 10px #0000001e;
-                        }
-            
-                        .img-1 {
-                            @extend .img;
-                            animation: agitation-1 3s ease infinite;
-                        }
-                
-                        .img-2 {
-                            @extend .img;
-                            top: 100px;
-                            left: 200px;
-                            animation: agitation-2 3s ease infinite;
-                        }
-            
-                        .img-3 {
-                            @extend .img;
-                            top: 250px;
-                            left: 200px;
-                            animation: agitation-3 2.5s ease infinite;
-                        }
-                    }
-
-                }
-
-                .wai {
-                    width: 60%;
-                    border: $puce-color solid 2px;
-                    backdrop-filter: blur(10px);
-                    border-radius: 5px;
-                    box-shadow: 5px 5px 10px #00000062;
-                    padding: 30px;
-                    text-align: justify;
-
-                    .title {
-                        color: white;
-                        font-size: 40px;
-
-                        span.puce-nombre {
-                            color: $puce-color;
-                            font-family: puce-font;
-                            margin-right: 20px;
-                        }
-                    }
-
-                    p.text {
-                        color: white;
-                    }
-
-                    p.signature {
-                        color: $puce-color;
-                        font-family: Poppins;
-                        float: right;
-                        font-size: 25px;
-                        margin-top: 20px;
-                    }
-                }
-        
-                nav {
+        .first {
+            background: url('../assets/img/circle-scatter-haikei.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-bottom: 80px;
+    
+                header {
                     width: 100%;
-                    height: 70px;
-                    display: flex;
-                    justify-content: flex-end;
+                    margin: auto;
                     
-                    ul {
-                        width: 40%;
-                        height: inherit;
+                    section {
+                        margin-top: 75px;
                         display: flex;
-                        align-items: center;
-                        justify-content: end;
-                        list-style-type: none;
-                        column-gap: 15%;
-        
-                        li {
-                            a {
-                                text-decoration: none;
-                                color: white;
-        
-                                span.puce-nombre {
-                                    color: $puce-color;
-                                    margin-right: 5px;
-                                    font-family: puce-font;
-                                    font-size: 23px;
-                                }
+                        justify-content: space-between;
+    
+                        section {
+                            width: 30%;
+                            position: relative;
+                            margin: 0;
+                            
+                            .img {
+                                width: 150px;
+                                border-radius: 5px;
+                                position: absolute;
+                                box-shadow: 10px 10px 10px #0000001e;
+                            }
+                
+                            .img-1 {
+                                @extend .img;
+                                animation: agitation-1 3s ease infinite;
+                            }
+                    
+                            .img-2 {
+                                @extend .img;
+                                top: 100px;
+                                left: 200px;
+                                animation: agitation-2 3s ease infinite;
+                            }
+                
+                            .img-3 {
+                                @extend .img;
+                                top: 250px;
+                                left: 200px;
+                                animation: agitation-3 2.5s ease infinite;
                             }
                         }
-                        
+    
                     }
+    
+                    .wai {
+                        width: 60%;
+                        border: $puce-color solid 2px;
+                        backdrop-filter: blur(10px);
+                        border-radius: 5px;
+                        box-shadow: 5px 5px 10px #00000062;
+                        padding: 30px;
+                        text-align: justify;
+    
+                        .title {
+                            color: white;
+                            font-size: 40px;
+    
+                            span.puce-nombre {
+                                color: $puce-color;
+                                font-family: puce-font;
+                                margin-right: 20px;
+                            }
+                        }
+    
+                        p.text {
+                            color: white;
+                        }
+    
+                        p.signature {
+                            color: $puce-color;
+                            font-family: Poppins;
+                            float: right;
+                            font-size: 25px;
+                            margin-top: 20px;
+                        }
+                    }
+            
+                    nav {
+                        width: 100%;
+                        height: 70px;
+                        display: flex;
+                        justify-content: flex-end;
+                        
+                        ul {
+                            width: 40%;
+                            height: inherit;
+                            display: flex;
+                            align-items: center;
+                            justify-content: end;
+                            list-style-type: none;
+                            column-gap: 8%;
+            
+                            li {
+                                a {
+                                    text-decoration: none;
+                                    color: white;
+            
+                                    span.puce-nombre {
+                                        color: $puce-color;
+                                        margin-right: 5px;
+                                        font-family: puce-font;
+                                        font-size: 23px;
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+            
                 }
-        
-            }
-
+    
+        }
     }
+
 
     .technologies {
         width: 100%;
-        margin-top: 400px;
+        margin-top: 200px;
         background-image: url("../assets/img/polygon-scatter-haikei.svg");
-        padding-left: 200px;
-        padding-right: 200px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 0 200px 53px 200px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
 
-        p.title {
+        .title {
             color: white;
             font-size: 40px;
             width: 100%;
