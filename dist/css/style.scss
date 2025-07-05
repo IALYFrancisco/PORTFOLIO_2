@@ -29,38 +29,83 @@ body {
         background: url('../assets/img/circle-scatter-haikei.svg');
         background-repeat: no-repeat;
         background-size: cover;
+        padding-bottom: 80px;
 
             header {
                 width: 100%;
                 max-width: 1320px;
                 margin: auto;
-        
-                img.img {
-                    width: 150px;
+                
+                section {
+                    margin-top: 75px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    section {
+                        width: 30%;
+                        position: relative;
+                        margin: 0;
+                        
+                        .img {
+                            width: 150px;
+                            border-radius: 5px;
+                            position: absolute;
+                            box-shadow: 10px 10px 10px #0000001e;
+                        }
+            
+                        .img-1 {
+                            @extend .img;
+                            animation: agitation-1 3s ease infinite;
+                        }
+                
+                        .img-2 {
+                            @extend .img;
+                            top: 100px;
+                            left: 200px;
+                            animation: agitation-2 3s ease infinite;
+                        }
+            
+                        .img-3 {
+                            @extend .img;
+                            top: 250px;
+                            left: 200px;
+                            animation: agitation-3 2.5s ease infinite;
+                        }
+                    }
+
+                }
+
+                .wai {
+                    width: 60%;
+                    border: $puce-color solid 2px;
+                    backdrop-filter: blur(10px);
                     border-radius: 5px;
-                    // position: absolute;
-                    box-shadow: 10px 10px 10px #0000001e;
-                }
-        
-                img.img-1 {
-                    @extend .img;
-                    top: 40px;
-                    left: 30px;
-                    animation: agitation-1 3s ease infinite;
-                }
-        
-                img.img-2 {
-                    @extend .img;
-                    top: 100px;
-                    left: 200px;
-                    animation: agitation-2 3s ease infinite;
-                }
-        
-                img.img-3 {
-                    @extend .img;
-                    top: 250px;
-                    left: 200px;
-                    animation: agitation-3 2.5s ease infinite;
+                    box-shadow: 5px 5px 10px #00000062;
+                    padding: 30px;
+                    text-align: justify;
+
+                    .title {
+                        color: white;
+                        font-size: 40px;
+
+                        span.puce-nombre {
+                            color: $puce-color;
+                            font-family: puce-font;
+                            margin-right: 20px;
+                        }
+                    }
+
+                    p.text {
+                        color: white;
+                    }
+
+                    p.signature {
+                        color: $puce-color;
+                        font-family: Poppins;
+                        float: right;
+                        font-size: 25px;
+                        margin-top: 20px;
+                    }
                 }
         
                 nav {
@@ -74,8 +119,9 @@ body {
                         height: inherit;
                         display: flex;
                         align-items: center;
-                        justify-content: space-around;
+                        justify-content: end;
                         list-style-type: none;
+                        column-gap: 15%;
         
                         li {
                             a {
@@ -96,41 +142,6 @@ body {
         
             }
 
-    }
-
-
-    div.wai {
-        width: 800px;
-        border: $puce-color solid 2px;
-        backdrop-filter: blur(10px);
-        margin-right: 100px;
-        border-radius: 5px;
-        box-shadow: 5px 5px 10px #00000062;
-        padding: 30px;
-        text-align: justify;
-
-        p.title {
-            color: white;
-            font-size: 40px;
-
-            span.puce-nombre {
-                color: $puce-color;
-                font-family: puce-font;
-                margin-right: 20px;
-            }
-        }
-
-        p.text {
-            color: white;
-        }
-
-        p.signature {
-            color: $puce-color;
-            font-family: Poppins;
-            float: right;
-            font-size: 25px;
-            margin-top: 20px;
-        }
     }
 
     .technologies {
@@ -279,15 +290,13 @@ body {
 @keyframes agitation-1 {
 
     0% {
-        top:50px;
+        top:0px;
     }
-    
     50% {
-        top: 40px;
+        top:30px;
     }
-
-    100% {
-        top:50px;
+    100%{
+        top: 0%;
     }
 
 }
@@ -299,7 +308,7 @@ body {
     }
     
     50% {
-        left: 210px;
+        left: 230px;
     }
 
     100% {
@@ -311,15 +320,15 @@ body {
 @keyframes agitation-3 {
 
     0% {
-        top: 250px;
+        top: 220px;
     }
     
     50% {
-        top: 240px;
+        top: 250px;
     }
 
     100% {
-        top: 250px;
+        top: 220px;
     }
 
 }

@@ -25,31 +25,69 @@ body .first {
   background: url("../assets/img/circle-scatter-haikei.svg");
   background-repeat: no-repeat;
   background-size: cover;
+  padding-bottom: 80px;
 }
 body .first header {
   width: 100%;
   max-width: 1320px;
   margin: auto;
 }
-body .first header img.img, body .first header img.img-3, body .first header img.img-2, body .first header img.img-1 {
+body .first header section {
+  margin-top: 75px;
+  display: flex;
+  justify-content: space-between;
+}
+body .first header section section {
+  width: 30%;
+  position: relative;
+  margin: 0;
+}
+body .first header section section .img, body .first header section section .img-3, body .first header section section .img-2, body .first header section section .img-1 {
   width: 150px;
   border-radius: 5px;
+  position: absolute;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1176470588);
 }
-body .first header img.img-1 {
-  top: 40px;
-  left: 30px;
+body .first header section section .img-1 {
   animation: agitation-1 3s ease infinite;
 }
-body .first header img.img-2 {
+body .first header section section .img-2 {
   top: 100px;
   left: 200px;
   animation: agitation-2 3s ease infinite;
 }
-body .first header img.img-3 {
+body .first header section section .img-3 {
   top: 250px;
   left: 200px;
   animation: agitation-3 2.5s ease infinite;
+}
+body .first header .wai {
+  width: 60%;
+  border: #FBAE3C solid 2px;
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3843137255);
+  padding: 30px;
+  text-align: justify;
+}
+body .first header .wai .title {
+  color: white;
+  font-size: 40px;
+}
+body .first header .wai .title span.puce-nombre {
+  color: #FBAE3C;
+  font-family: puce-font;
+  margin-right: 20px;
+}
+body .first header .wai p.text {
+  color: white;
+}
+body .first header .wai p.signature {
+  color: #FBAE3C;
+  font-family: Poppins;
+  float: right;
+  font-size: 25px;
+  margin-top: 20px;
 }
 body .first header nav {
   width: 100%;
@@ -62,8 +100,9 @@ body .first header nav ul {
   height: inherit;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: end;
   list-style-type: none;
+  column-gap: 15%;
 }
 body .first header nav ul li a {
   text-decoration: none;
@@ -74,35 +113,6 @@ body .first header nav ul li a span.puce-nombre {
   margin-right: 5px;
   font-family: puce-font;
   font-size: 23px;
-}
-body div.wai {
-  width: 800px;
-  border: #FBAE3C solid 2px;
-  backdrop-filter: blur(10px);
-  margin-right: 100px;
-  border-radius: 5px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3843137255);
-  padding: 30px;
-  text-align: justify;
-}
-body div.wai p.title {
-  color: white;
-  font-size: 40px;
-}
-body div.wai p.title span.puce-nombre {
-  color: #FBAE3C;
-  font-family: puce-font;
-  margin-right: 20px;
-}
-body div.wai p.text {
-  color: white;
-}
-body div.wai p.signature {
-  color: #FBAE3C;
-  font-family: Poppins;
-  float: right;
-  font-size: 25px;
-  margin-top: 20px;
 }
 body .technologies {
   width: 100%;
@@ -224,13 +234,13 @@ body footer div.parent span {
 }
 @keyframes agitation-1 {
   0% {
-    top: 50px;
+    top: 0px;
   }
   50% {
-    top: 40px;
+    top: 30px;
   }
   100% {
-    top: 50px;
+    top: 0%;
   }
 }
 @keyframes agitation-2 {
@@ -238,7 +248,7 @@ body footer div.parent span {
     left: 200px;
   }
   50% {
-    left: 210px;
+    left: 230px;
   }
   100% {
     left: 200px;
@@ -246,13 +256,13 @@ body footer div.parent span {
 }
 @keyframes agitation-3 {
   0% {
-    top: 250px;
+    top: 220px;
   }
   50% {
-    top: 240px;
+    top: 250px;
   }
   100% {
-    top: 250px;
+    top: 220px;
   }
 }
 
