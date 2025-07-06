@@ -37,6 +37,9 @@ body main .first header {
   width: 100%;
   margin: auto;
 }
+body main .first header nav ul li a {
+  white-space: nowrap;
+}
 body main .first header section {
   margin-top: 75px;
   display: flex;
@@ -238,6 +241,25 @@ body footer {
   color: #001220;
 }
 
+@media only screen and (max-width: 1024px) {
+  body main {
+    padding: 0 25px;
+  }
+  body main .first header section .wai {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  body main {
+    padding: 0 25px;
+  }
+  body main .first header section section {
+    width: 0;
+  }
+  body main .first header section .wai {
+    width: 100%;
+  }
+}
 @keyframes circle {
   to {
     stroke-dashoffset: 280;

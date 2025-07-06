@@ -40,6 +40,16 @@ body {
                 header {
                     width: 100%;
                     margin: auto;
+
+                    nav {
+                        ul {
+                            li {
+                                a {
+                                    white-space: nowrap;
+                                }
+                            }
+                        }
+                    }
                     
                     section {
                         margin-top: 75px;
@@ -317,6 +327,38 @@ body {
         color: #001220;
     }
 
+}
+
+@media only screen and (max-width: 1024px) {
+    body main {
+        padding: 0 25px;
+
+        .first header section {
+
+            .wai {
+               width: 100%;
+            }
+
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    body main {
+        padding: 0 25px;
+
+        .first header section {
+
+            section {
+                width: 0;
+            }
+
+            .wai {
+               width: 100%;
+            }
+
+        }
+    }
 }
 
 @keyframes circle {
