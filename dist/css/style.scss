@@ -334,7 +334,9 @@ body {
         padding: 0 25px;
 
         .first header section {
-
+            section {
+                width: 0;
+            }
             .wai {
                width: 100%;
             }
@@ -343,20 +345,14 @@ body {
     }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 700px) {
     body main {
-        padding: 0 25px;
-
-        .first header section {
-
-            section {
-                width: 0;
+        .second {
+            .technologies {
+                div.box {
+                   margin: 0 10px 10px 10px !important;
+                }
             }
-
-            .wai {
-               width: 100%;
-            }
-
         }
     }
 }

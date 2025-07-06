@@ -245,19 +245,16 @@ body footer {
   body main {
     padding: 0 25px;
   }
-  body main .first header section .wai {
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 1024px) {
-  body main {
-    padding: 0 25px;
-  }
   body main .first header section section {
     width: 0;
   }
   body main .first header section .wai {
     width: 100%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  body main .second .technologies div.box {
+    margin: 0 10px 10px 10px !important;
   }
 }
 @keyframes circle {
