@@ -21,11 +21,17 @@ html {
     font-family: Poppins;
 }
 
-nav {
+.desktop-menu {
     width: 100%;
     height: 70px;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+
+        img {
+            width: 35px;
+            display: none;
+        }
         
         ul {
             width: 40%;
@@ -334,19 +340,33 @@ body {
 }
 
 @media only screen and (max-width: 700px) {
-    body main {
-        .second {
-            .technologies {
-                div.box {
-                   margin: 0 10px 10px 10px !important;
+    body {
+        main {
+            overflow: hidden;
+            .second {
+                .technologies {
+                    div.box {
+                       margin: 0 10px 10px 10px !important;
+                    }
                 }
             }
         }
     }
     
-    .desktop-menu {
-        display: none;   
+    .desktop-menu ul {
+        display: none;
     }
+
+    .desktop-menu img {
+        display: initial;
+        transition: 200ms;
+    }
+
+    .desktop-menu img:active {
+        transform: scale(0.8);
+        transition: 200ms;
+    }
+
 }
 
 @keyframes circle {
