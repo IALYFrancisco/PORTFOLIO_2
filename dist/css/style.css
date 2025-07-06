@@ -118,6 +118,77 @@ body main .first header nav ul li a span.puce-nombre {
   font-family: puce-font;
   font-size: 23px;
 }
+body main .second .technologies {
+  width: 100%;
+  margin-top: 150px;
+  background-image: url("../assets/img/polygon-scatter-haikei.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body main .second .technologies .title {
+  color: white;
+  font-size: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+body main .second .technologies .title span.puce-nombre {
+  color: #FBAE3C;
+  font-family: puce-font;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+body main .second .technologies div.box {
+  width: 170px;
+  height: max-content;
+  background: white;
+  box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.384);
+  border-radius: 5px;
+  padding-bottom: 10px;
+  border: #686868 2px solid;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 40px;
+}
+body main .second .technologies div.box div.percent {
+  position: relative;
+}
+body main .second .technologies div.box div.percent span.puce-nombre {
+  color: #001220;
+  font-size: 30px;
+  font-family: puce-font;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+body main .second .technologies div.box svg circle:nth-child(1) {
+  fill: none;
+  stroke: #d4d4d3;
+  stroke-width: 5px;
+  stroke-dasharray: 350;
+}
+body main .second .technologies div.box svg circle:nth-child(2) {
+  fill: none;
+  stroke: red;
+  stroke-width: 5px;
+  stroke-dasharray: 350;
+  stroke-dashoffset: 345;
+  animation: circle 2s forwards;
+}
+body main .second .technologies div.box div.image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 body main .third {
   margin-top: 200px;
   display: flex;
@@ -131,77 +202,6 @@ body main .third div {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-body .technologies {
-  width: 100%;
-  margin-top: 150px;
-  background-image: url("../assets/img/polygon-scatter-haikei.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-body .technologies .title {
-  color: white;
-  font-size: 40px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 60px;
-}
-body .technologies .title span.puce-nombre {
-  color: #FBAE3C;
-  font-family: puce-font;
-  margin-right: 20px;
-  display: flex;
-  align-items: center;
-}
-body .technologies div.box {
-  width: 170px;
-  height: max-content;
-  background: white;
-  box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.384);
-  border-radius: 5px;
-  padding-bottom: 10px;
-  border: #686868 2px solid;
-  margin-left: 30px;
-  margin-right: 30px;
-  margin-bottom: 40px;
-}
-body .technologies div.box div.percent {
-  position: relative;
-}
-body .technologies div.box div.percent span.puce-nombre {
-  color: #001220;
-  font-size: 30px;
-  font-family: puce-font;
-  margin-right: 20px;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-body .technologies div.box svg circle:nth-child(1) {
-  fill: none;
-  stroke: #d4d4d3;
-  stroke-width: 5px;
-  stroke-dasharray: 350;
-}
-body .technologies div.box svg circle:nth-child(2) {
-  fill: none;
-  stroke: red;
-  stroke-width: 5px;
-  stroke-dasharray: 350;
-  stroke-dashoffset: 345;
-  animation: circle 2s forwards;
-}
-body .technologies div.box div.image {
-  width: 100%;
-  display: flex;
-  justify-content: center;
 }
 body footer {
   background: url("../assets/img/wave.svg");
