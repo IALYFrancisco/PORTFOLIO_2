@@ -175,7 +175,7 @@ body {
                     }
                 }
 
-                div.box {
+                box {
                     width: 170px;
                     height: max-content;
                     background: white;
@@ -183,13 +183,11 @@ body {
                     border-radius: 5px;
                     padding-bottom: 10px;
                     border: #686868 2px solid;
-                    margin-left: 30px;
-                    margin-right: 30px;
-                    margin-bottom: 40px;
-
+                    margin: 0 30px 40px 30px;
+                    
                     div.percent {
                         position: relative;
-
+    
                         span.puce-nombre {
                             color: #001220;
                             font-size: 30px;
@@ -202,28 +200,84 @@ body {
                             top: 50%;
                             transform: translate(-50%, -50%);    
                         }
-                    }
 
-                    svg circle:nth-child(1) {
-                        fill: none;
-                        stroke: #d4d4d3;
-                        stroke-width: 5px;
-                        stroke-dasharray: 350;
-                    }
-
-                    svg circle:nth-child(2) {
-                        fill: none;
-                        stroke: red;
-                        stroke-width: 5px;
-                        stroke-dasharray: 350;
-                        stroke-dashoffset: 345;
-                        animation: circle 2s forwards;
+                        svg circle:nth-child(1) {
+                            fill: none;
+                            stroke: #d4d4d3;
+                            stroke-width: 5px;
+                            stroke-dasharray: 350;
+                        }
+        
+                        svg circle:nth-child(2) {
+                            fill: none;
+                            stroke: red;
+                            stroke-width: 5px;
+                            stroke-dashoffset: 345;
+                            animation: circle 2s forwards;
+                        }
+        
                     }
 
                     div.image {
                         width: 100%;
                         display: flex;
                         justify-content: center;
+                    }
+                }
+
+                div.box:nth-child(2) {
+                    @extend box;
+
+                    svg circle:nth-child(2){
+                        stroke-dasharray: 430;
+                    }
+                }
+
+                div.box:nth-child(3) {
+                    @extend box;
+
+                    svg circle:nth-child(2){
+                        stroke-dasharray: 510;
+                    }
+                }
+
+                div.box:nth-child(4) {
+                    @extend box;
+
+                    svg circle:nth-child(2){
+                        stroke-dasharray: 490;
+                    }
+                }
+
+                div.box:nth-child(5) {
+                    @extend box;
+
+                    svg circle:nth-child(2){
+                        stroke-dasharray: 575;
+                    }
+                }
+
+                div.box:nth-child(6) {
+                    @extend box;
+
+                    svg circle:nth-child(2){
+                        stroke-dasharray: 600;
+                    }
+                }
+
+                div.box:nth-child(7) {
+                    @extend box;
+
+                    svg circle:nth-child(2){
+                        stroke-dasharray: 400;
+                    }
+                }
+
+                div.box:nth-child(8) {
+                    @extend box;
+
+                    svg circle:nth-child(2){
+                        stroke-dasharray: 590;
                     }
                 }
             }
@@ -257,11 +311,8 @@ body {
         display: flex;
         align-items: end;
         justify-content: center;
-
-        p {
-            color: #001220;
-            font-size: 14px;
-        }
+        color: #001220;
+        font-size: 14px;
     }
 
 }

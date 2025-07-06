@@ -143,7 +143,7 @@ body main .second .technologies .title span.puce-nombre {
   display: flex;
   align-items: center;
 }
-body main .second .technologies div.box {
+body main .second .technologies box, body main .second .technologies div.box:nth-child(8), body main .second .technologies div.box:nth-child(7), body main .second .technologies div.box:nth-child(6), body main .second .technologies div.box:nth-child(5), body main .second .technologies div.box:nth-child(4), body main .second .technologies div.box:nth-child(3), body main .second .technologies div.box:nth-child(2) {
   width: 170px;
   height: max-content;
   background: white;
@@ -151,14 +151,12 @@ body main .second .technologies div.box {
   border-radius: 5px;
   padding-bottom: 10px;
   border: #686868 2px solid;
-  margin-left: 30px;
-  margin-right: 30px;
-  margin-bottom: 40px;
+  margin: 0 30px 40px 30px;
 }
-body main .second .technologies div.box div.percent {
+body main .second .technologies box div.percent, body main .second .technologies div.box:nth-child(8) div.percent, body main .second .technologies div.box:nth-child(7) div.percent, body main .second .technologies div.box:nth-child(6) div.percent, body main .second .technologies div.box:nth-child(5) div.percent, body main .second .technologies div.box:nth-child(4) div.percent, body main .second .technologies div.box:nth-child(3) div.percent, body main .second .technologies div.box:nth-child(2) div.percent {
   position: relative;
 }
-body main .second .technologies div.box div.percent span.puce-nombre {
+body main .second .technologies box div.percent span.puce-nombre, body main .second .technologies div.box:nth-child(8) div.percent span.puce-nombre, body main .second .technologies div.box:nth-child(7) div.percent span.puce-nombre, body main .second .technologies div.box:nth-child(6) div.percent span.puce-nombre, body main .second .technologies div.box:nth-child(5) div.percent span.puce-nombre, body main .second .technologies div.box:nth-child(4) div.percent span.puce-nombre, body main .second .technologies div.box:nth-child(3) div.percent span.puce-nombre, body main .second .technologies div.box:nth-child(2) div.percent span.puce-nombre {
   color: #001220;
   font-size: 30px;
   font-family: puce-font;
@@ -170,24 +168,44 @@ body main .second .technologies div.box div.percent span.puce-nombre {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-body main .second .technologies div.box svg circle:nth-child(1) {
+body main .second .technologies box div.percent svg circle:nth-child(1), body main .second .technologies div.box:nth-child(8) div.percent svg circle:nth-child(1), body main .second .technologies div.box:nth-child(7) div.percent svg circle:nth-child(1), body main .second .technologies div.box:nth-child(6) div.percent svg circle:nth-child(1), body main .second .technologies div.box:nth-child(5) div.percent svg circle:nth-child(1), body main .second .technologies div.box:nth-child(4) div.percent svg circle:nth-child(1), body main .second .technologies div.box:nth-child(3) div.percent svg circle:nth-child(1), body main .second .technologies div.box:nth-child(2) div.percent svg circle:nth-child(1) {
   fill: none;
   stroke: #d4d4d3;
   stroke-width: 5px;
   stroke-dasharray: 350;
 }
-body main .second .technologies div.box svg circle:nth-child(2) {
+body main .second .technologies box div.percent svg circle:nth-child(2), body main .second .technologies div.box:nth-child(8) div.percent svg circle:nth-child(2), body main .second .technologies div.box:nth-child(7) div.percent svg circle:nth-child(2), body main .second .technologies div.box:nth-child(6) div.percent svg circle:nth-child(2), body main .second .technologies div.box:nth-child(5) div.percent svg circle:nth-child(2), body main .second .technologies div.box:nth-child(4) div.percent svg circle:nth-child(2), body main .second .technologies div.box:nth-child(3) div.percent svg circle:nth-child(2), body main .second .technologies div.box:nth-child(2) div.percent svg circle:nth-child(2) {
   fill: none;
   stroke: red;
   stroke-width: 5px;
-  stroke-dasharray: 350;
   stroke-dashoffset: 345;
   animation: circle 2s forwards;
 }
-body main .second .technologies div.box div.image {
+body main .second .technologies box div.image, body main .second .technologies div.box:nth-child(8) div.image, body main .second .technologies div.box:nth-child(7) div.image, body main .second .technologies div.box:nth-child(6) div.image, body main .second .technologies div.box:nth-child(5) div.image, body main .second .technologies div.box:nth-child(4) div.image, body main .second .technologies div.box:nth-child(3) div.image, body main .second .technologies div.box:nth-child(2) div.image {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+body main .second .technologies div.box:nth-child(2) svg circle:nth-child(2) {
+  stroke-dasharray: 430;
+}
+body main .second .technologies div.box:nth-child(3) svg circle:nth-child(2) {
+  stroke-dasharray: 510;
+}
+body main .second .technologies div.box:nth-child(4) svg circle:nth-child(2) {
+  stroke-dasharray: 490;
+}
+body main .second .technologies div.box:nth-child(5) svg circle:nth-child(2) {
+  stroke-dasharray: 575;
+}
+body main .second .technologies div.box:nth-child(6) svg circle:nth-child(2) {
+  stroke-dasharray: 600;
+}
+body main .second .technologies div.box:nth-child(7) svg circle:nth-child(2) {
+  stroke-dasharray: 400;
+}
+body main .second .technologies div.box:nth-child(8) svg circle:nth-child(2) {
+  stroke-dasharray: 590;
 }
 body main .third {
   margin-top: 200px;
@@ -214,8 +232,6 @@ body footer {
   display: flex;
   align-items: end;
   justify-content: center;
-}
-body footer p {
   color: #001220;
   font-size: 14px;
 }
