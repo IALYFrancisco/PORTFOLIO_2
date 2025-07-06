@@ -31,6 +31,31 @@ html {
     position: fixed;
     transition: 200ms;
     left: -100%;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        height: 100%;
+        row-gap: 50px;
+                li {
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        white-space: nowrap;
+            
+                        span.puce-nombre {
+                            color: $puce-color;
+                            margin-right: 5px;
+                            font-family: puce-font;
+                            font-size: 23px;
+                        }
+                    }
+                }                        
+        }
+
 }
 
 .overlay.active {
@@ -359,14 +384,48 @@ body {
 @media only screen and (max-width: 700px) {
     body {
         main {
+            padding: 0 10px;
             overflow: hidden;
+
+            .first header section {
+                .wai {
+                    padding: 10px;
+
+                    .title {
+                       font-size: 35px;
+                    }
+                }
+
+            }
+
             .second {
                 .technologies {
                     div.box {
                        margin: 0 10px 10px 10px !important;
                     }
+                    .title {
+                    font-size: 30px;
+
+                    span.puce-nombre {
+                        margin-right: 5px;
+                    }
+                }
+
                 }
             }
+
+            .third {
+                flex-wrap: wrap;
+                row-gap: 75px;    
+                div a,
+                div {
+                    row-gap: 20px;
+                }
+
+            }
+        }
+        footer {
+            padding-bottom: 10px;
         }
     }
     
