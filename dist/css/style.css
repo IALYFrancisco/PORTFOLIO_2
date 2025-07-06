@@ -118,6 +118,20 @@ body main .first header nav ul li a span.puce-nombre {
   font-family: puce-font;
   font-size: 23px;
 }
+body main .third {
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: center;
+  column-gap: 50px;
+}
+body main .third div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 body .technologies {
   width: 100%;
   margin-top: 150px;

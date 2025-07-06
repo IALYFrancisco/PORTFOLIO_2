@@ -147,6 +147,22 @@ body {
                 }
     
         }
+        .third {
+            margin-top: 200px;
+            display: flex;
+            align-items: center;
+            color: white;
+            justify-content: center;
+            column-gap: 50px;
+
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+        }
     }
 
 
