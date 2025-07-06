@@ -179,7 +179,7 @@ body main .second .technologies box div.percent svg circle:nth-child(2), body ma
   stroke: red;
   stroke-width: 5px;
   stroke-dashoffset: 345;
-  animation: circle 2s forwards;
+  animation: circle 10s forwards;
 }
 body main .second .technologies box div.image, body main .second .technologies div.box:nth-child(8) div.image, body main .second .technologies div.box:nth-child(7) div.image, body main .second .technologies div.box:nth-child(6) div.image, body main .second .technologies div.box:nth-child(5) div.image, body main .second .technologies div.box:nth-child(4) div.image, body main .second .technologies div.box:nth-child(3) div.image, body main .second .technologies div.box:nth-child(2) div.image {
   width: 100%;
