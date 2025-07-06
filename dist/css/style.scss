@@ -1,0 +1,498 @@
+@font-face {
+    font-family: puce-font;
+    src: url("../assets/fonts/Scripto-2OR2v.ttf");
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("../assets/fonts/Poppins-Regular.ttf");
+}
+
+$puce-color: #FBAE3C;
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    position: fixed;
+    transition: 200ms;
+    left: -100%;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        height: 100%;
+        row-gap: 50px;
+                li {
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        white-space: nowrap;
+            
+                        span.puce-nombre {
+                            color: $puce-color;
+                            margin-right: 5px;
+                            font-family: puce-font;
+                            font-size: 23px;
+                        }
+                    }
+                }                        
+        }
+
+}
+
+.overlay.active {
+    left: 0;
+}
+
+.desktop-menu {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+        img {
+            width: 35px;
+            display: none;
+        }
+        
+        ul {
+            width: 40%;
+            height: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            list-style-type: none;
+            column-gap: 8%;
+            
+                li {
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        white-space: nowrap;
+            
+                        span.puce-nombre {
+                            color: $puce-color;
+                            margin-right: 5px;
+                            font-family: puce-font;
+                            font-size: 23px;
+                        }
+                    }
+                }                        
+        }
+}
+
+body {
+    width: 100%;
+    background: #001220;
+    position: relative;
+
+    main {
+        width: 100%;
+        max-width: 1300px;
+        margin: auto;
+        padding: 0 50px;
+
+        .first {
+            background: url('../assets/img/circle-scatter-haikei.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-bottom: 80px;
+    
+                header {
+                    width: 100%;
+                    margin: auto;
+                    
+                    section {
+                        margin-top: 75px;
+                        display: flex;
+                        justify-content: space-between;
+    
+                        section {
+                            width: 30%;
+                            position: relative;
+                            margin: 0;
+                            
+                            .img {
+                                width: 150px;
+                                border-radius: 5px;
+                                position: absolute;
+                                box-shadow: 10px 10px 10px #0000001e;
+                            }
+                
+                            .img-1 {
+                                @extend .img;
+                                animation: agitation-1 3s ease infinite;
+                            }
+                    
+                            .img-2 {
+                                @extend .img;
+                                top: 100px;
+                                left: 200px;
+                                animation: agitation-2 3s ease infinite;
+                            }
+                
+                            .img-3 {
+                                @extend .img;
+                                top: 250px;
+                                left: 200px;
+                                animation: agitation-3 2.5s ease infinite;
+                            }
+                        }
+    
+                    }
+    
+                    .wai {
+                        width: 60%;
+                        border: $puce-color solid 2px;
+                        backdrop-filter: blur(10px);
+                        border-radius: 5px;
+                        box-shadow: 5px 5px 10px #00000062;
+                        padding: 30px;
+                        text-align: justify;
+    
+                        .title {
+                            color: white;
+                            font-size: 40px;
+    
+                            span.puce-nombre {
+                                color: $puce-color;
+                                font-family: puce-font;
+                                margin-right: 20px;
+                            }
+                        }
+    
+                        p.text {
+                            color: white;
+                        }
+    
+                        p.signature {
+                            color: $puce-color;
+                            font-family: Poppins;
+                            float: right;
+                            font-size: 25px;
+                            margin-top: 20px;
+                        }
+                    }
+                }
+        }
+        .second {
+            .technologies {
+                width: 100%;
+                margin-top: 150px;
+                background-image: url("../assets/img/polygon-scatter-haikei.svg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .title {
+                    color: white;
+                    font-size: 40px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 60px;
+
+                    span.puce-nombre {
+                        color: $puce-color;
+                        font-family: puce-font;
+                        margin-right: 20px;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+
+                box {
+                    width: 170px;
+                    height: max-content;
+                    background: white;
+                    box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.384);
+                    border-radius: 5px;
+                    padding-bottom: 10px;
+                    border: #686868 2px solid;
+                    margin: 0 30px 40px 30px;
+                    
+                    div.percent {
+                        position: relative;
+    
+                        span.puce-nombre {
+                            color: #001220;
+                            font-size: 30px;
+                            font-family: puce-font;
+                            margin-right: 20px;
+                            display: flex;
+                            align-items: center;
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);    
+                        }
+
+                        svg circle:nth-child(1) {
+                            fill: none;
+                            stroke: #d4d4d3;
+                            stroke-width: 5px;
+                            stroke-dasharray: 350;
+                        }
+        
+                        svg circle:nth-child(2) {
+                            fill: none;
+                            stroke: red;
+                            stroke-width: 5px;
+                            stroke-dashoffset: 345;
+                            animation: circle 10s forwards;
+                        }
+        
+                    }
+
+                    div.image {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+
+                div.box:nth-child(2) {
+                    @extend box;
+
+                    svg circle:nth-child(2){
+                        stroke-dasharray: 430;
+                    }
+                }
+
+                div.box:nth-child(3) {
+                    @extend box;
+
+                    svg circle:nth-child(2){
+                        stroke-dasharray: 510;
+                    }
+                }
+
+                div.box:nth-child(4) {
+                    @extend box;
+
+                    svg circle:nth-child(2){
+                        stroke-dasharray: 490;
+                    }
+                }
+
+                div.box:nth-child(5) {
+                    @extend box;
+
+                    svg circle:nth-child(2){
+                        stroke-dasharray: 575;
+                    }
+                }
+
+                div.box:nth-child(6) {
+                    @extend box;
+
+                    svg circle:nth-child(2){
+                        stroke-dasharray: 600;
+                    }
+                }
+
+                div.box:nth-child(7) {
+                    @extend box;
+
+                    svg circle:nth-child(2){
+                        stroke-dasharray: 400;
+                    }
+                }
+
+                div.box:nth-child(8) {
+                    @extend box;
+
+                    svg circle:nth-child(2){
+                        stroke-dasharray: 590;
+                    }
+                }
+            }
+        }
+        .third {
+            margin-top: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 50px;
+            
+            div a,
+            div {
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                row-gap: 20px;
+            }
+
+        }
+    }
+
+    footer {
+        background: url("../assets/img/wave.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        height: 300px;
+        margin-top: 50px;
+        padding-bottom: 30px;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        color: #001220;
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+    body main {
+        padding: 0 25px;
+
+        .first header section {
+            section {
+                width: 0;
+            }
+            .wai {
+               width: 100%;
+            }
+
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        main {
+            padding: 0 10px;
+            overflow: hidden;
+
+            .first header section {
+                .wai {
+                    padding: 10px;
+
+                    .title {
+                       font-size: 35px;
+                    }
+                }
+
+            }
+
+            .second {
+                .technologies {
+                    div.box {
+                       margin: 0 10px 10px 10px !important;
+                    }
+                    .title {
+                    font-size: 30px;
+
+                    span.puce-nombre {
+                        margin-right: 5px;
+                    }
+                }
+
+                }
+            }
+
+            .third {
+                flex-wrap: wrap;
+                row-gap: 75px;    
+                div a,
+                div {
+                    row-gap: 20px;
+                }
+
+            }
+        }
+        footer {
+            padding-bottom: 10px;
+        }
+    }
+    
+    .desktop-menu ul {
+        display: none;
+    }
+
+    .desktop-menu img {
+        display: initial;
+        transition: 200ms;
+    }
+
+    .desktop-menu img:active {
+        transform: scale(0.8);
+        transition: 200ms;
+    }
+
+}
+
+@keyframes circle {
+    to {
+        stroke-dashoffset: 280;
+    }
+}
+
+@keyframes agitation-1 {
+
+    0% {
+        top:0px;
+    }
+    50% {
+        top:30px;
+    }
+    100%{
+        top: 0%;
+    }
+
+}
+
+@keyframes agitation-2 {
+
+    0% {
+        left: 200px;
+    }
+    
+    50% {
+        left: 230px;
+    }
+
+    100% {
+        left: 200px;
+    }
+
+}
+
+@keyframes agitation-3 {
+
+    0% {
+        top: 220px;
+    }
+    
+    50% {
+        top: 250px;
+    }
+
+    100% {
+        top: 220px;
+    }
+
+}

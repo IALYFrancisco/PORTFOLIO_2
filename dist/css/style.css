@@ -1,119 +1,179 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @font-face {
   font-family: puce-font;
-  src: url("/assets/font/scripto-font/Scripto-2OR2v.ttf");
+  src: url("../assets/fonts/Scripto-2OR2v.ttf");
 }
+@font-face {
+  font-family: Poppins;
+  src: url("../assets/fonts/Poppins-Regular.ttf");
+}
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Poppins;
-  scroll-behavior: smooth;
 }
 
-body {
-  width: 100%;
-  height: max-content;
-  background: #001220;
-}
-body header {
-  width: 100%;
-  height: 400px;
-  position: relative;
-}
-body header svg {
+.overlay {
   position: absolute;
-  z-index: -1;
-  top: 0;
-}
-body header img.img, body header img.img-3, body header img.img-2, body header img.img-1 {
-  width: 150px;
-  border-radius: 5px;
-  position: absolute;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1176470588);
-}
-body header img.img-1 {
-  top: 40px;
-  left: 30px;
-  animation: agitation-1 3s ease infinite;
-}
-body header img.img-2 {
-  top: 100px;
-  left: 200px;
-  animation: agitation-2 3s ease infinite;
-}
-body header img.img-3 {
-  top: 250px;
-  left: 200px;
-  animation: agitation-3 2.5s ease infinite;
-}
-body header nav {
   width: 100%;
-  height: 70px;
-  display: flex;
-  justify-content: flex-end;
+  height: 100vh;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  z-index: 1;
+  position: fixed;
+  transition: 200ms;
+  left: -100%;
 }
-body header nav ul {
-  width: 40%;
-  height: inherit;
+.overlay ul {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
   list-style-type: none;
+  height: 100%;
+  row-gap: 50px;
 }
-body header nav ul li a {
+.overlay ul li a {
   text-decoration: none;
   color: white;
+  white-space: nowrap;
 }
-body header nav ul li a span.puce-nombre {
+.overlay ul li a span.puce-nombre {
   color: #FBAE3C;
   margin-right: 5px;
   font-family: puce-font;
   font-size: 23px;
 }
-body div.wai {
-  width: 800px;
-  height: max-content;
+
+.overlay.active {
+  left: 0;
+}
+
+.desktop-menu {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.desktop-menu img {
+  width: 35px;
+  display: none;
+}
+.desktop-menu ul {
+  width: 40%;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  list-style-type: none;
+  column-gap: 8%;
+}
+.desktop-menu ul li a {
+  text-decoration: none;
+  color: white;
+  white-space: nowrap;
+}
+.desktop-menu ul li a span.puce-nombre {
+  color: #FBAE3C;
+  margin-right: 5px;
+  font-family: puce-font;
+  font-size: 23px;
+}
+
+body {
+  width: 100%;
+  background: #001220;
+  position: relative;
+}
+body main {
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 50px;
+}
+body main .first {
+  background: url("../assets/img/circle-scatter-haikei.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 80px;
+}
+body main .first header {
+  width: 100%;
+  margin: auto;
+}
+body main .first header section {
+  margin-top: 75px;
+  display: flex;
+  justify-content: space-between;
+}
+body main .first header section section {
+  width: 30%;
+  position: relative;
+  margin: 0;
+}
+body main .first header section section .img, body main .first header section section .img-3, body main .first header section section .img-2, body main .first header section section .img-1 {
+  width: 150px;
+  border-radius: 5px;
+  position: absolute;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1176470588);
+}
+body main .first header section section .img-1 {
+  animation: agitation-1 3s ease infinite;
+}
+body main .first header section section .img-2 {
+  top: 100px;
+  left: 200px;
+  animation: agitation-2 3s ease infinite;
+}
+body main .first header section section .img-3 {
+  top: 250px;
+  left: 200px;
+  animation: agitation-3 2.5s ease infinite;
+}
+body main .first header .wai {
+  width: 60%;
   border: #FBAE3C solid 2px;
-  float: right;
   backdrop-filter: blur(10px);
-  margin-top: -300px;
-  margin-right: 100px;
   border-radius: 5px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3843137255);
   padding: 30px;
   text-align: justify;
 }
-body div.wai p.title {
+body main .first header .wai .title {
   color: white;
   font-size: 40px;
 }
-body div.wai p.title span.puce-nombre {
+body main .first header .wai .title span.puce-nombre {
   color: #FBAE3C;
   font-family: puce-font;
   margin-right: 20px;
 }
-body div.wai p.text {
+body main .first header .wai p.text {
   color: white;
 }
-body div.wai p.signature {
+body main .first header .wai p.signature {
   color: #FBAE3C;
   font-family: Poppins;
   float: right;
   font-size: 25px;
   margin-top: 20px;
 }
-body .technologies {
+body main .second .technologies {
   width: 100%;
-  margin-top: 400px;
-  background-image: url(/assets/img/polygon-scatter-haikei.svg);
-  padding-left: 200px;
-  padding-right: 200px;
+  margin-top: 150px;
+  background-image: url("../assets/img/polygon-scatter-haikei.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-body .technologies p.title {
+body main .second .technologies .title {
   color: white;
   font-size: 40px;
   width: 100%;
@@ -121,14 +181,14 @@ body .technologies p.title {
   justify-content: center;
   margin-bottom: 60px;
 }
-body .technologies p.title span.puce-nombre {
+body main .second .technologies .title span.puce-nombre {
   color: #FBAE3C;
   font-family: puce-font;
   margin-right: 20px;
   display: flex;
   align-items: center;
 }
-body .technologies div.box {
+body main .second .technologies box, body main .second .technologies div.box:nth-child(8), body main .second .technologies div.box:nth-child(7), body main .second .technologies div.box:nth-child(6), body main .second .technologies div.box:nth-child(5), body main .second .technologies div.box:nth-child(4), body main .second .technologies div.box:nth-child(3), body main .second .technologies div.box:nth-child(2) {
   width: 170px;
   height: max-content;
   background: white;
@@ -136,14 +196,12 @@ body .technologies div.box {
   border-radius: 5px;
   padding-bottom: 10px;
   border: #686868 2px solid;
-  margin-left: 30px;
-  margin-right: 30px;
-  margin-bottom: 40px;
+  margin: 0 30px 40px 30px;
 }
-body .technologies div.box div.percent {
+body main .second .technologies box div.percent, body main .second .technologies div.box:nth-child(8) div.percent, body main .second .technologies div.box:nth-child(7) div.percent, body main .second .technologies div.box:nth-child(6) div.percent, body main .second .technologies div.box:nth-child(5) div.percent, body main .second .technologies div.box:nth-child(4) div.percent, body main .second .technologies div.box:nth-child(3) div.percent, body main .second .technologies div.box:nth-child(2) div.percent {
   position: relative;
 }
-body .technologies div.box div.percent span.puce-nombre {
+body main .second .technologies box div.percent span.puce-nombre, body main .second .technologies div.box:nth-child(8) div.percent span.puce-nombre, body main .second .technologies div.box:nth-child(7) div.percent span.puce-nombre, body main .second .technologies div.box:nth-child(6) div.percent span.puce-nombre, body main .second .technologies div.box:nth-child(5) div.percent span.puce-nombre, body main .second .technologies div.box:nth-child(4) div.percent span.puce-nombre, body main .second .technologies div.box:nth-child(3) div.percent span.puce-nombre, body main .second .technologies div.box:nth-child(2) div.percent span.puce-nombre {
   color: #001220;
   font-size: 30px;
   font-family: puce-font;
@@ -155,67 +213,129 @@ body .technologies div.box div.percent span.puce-nombre {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-body .technologies div.box svg circle:nth-child(1) {
+body main .second .technologies box div.percent svg circle:nth-child(1), body main .second .technologies div.box:nth-child(8) div.percent svg circle:nth-child(1), body main .second .technologies div.box:nth-child(7) div.percent svg circle:nth-child(1), body main .second .technologies div.box:nth-child(6) div.percent svg circle:nth-child(1), body main .second .technologies div.box:nth-child(5) div.percent svg circle:nth-child(1), body main .second .technologies div.box:nth-child(4) div.percent svg circle:nth-child(1), body main .second .technologies div.box:nth-child(3) div.percent svg circle:nth-child(1), body main .second .technologies div.box:nth-child(2) div.percent svg circle:nth-child(1) {
   fill: none;
   stroke: #d4d4d3;
   stroke-width: 5px;
   stroke-dasharray: 350;
 }
-body .technologies div.box svg circle:nth-child(2) {
+body main .second .technologies box div.percent svg circle:nth-child(2), body main .second .technologies div.box:nth-child(8) div.percent svg circle:nth-child(2), body main .second .technologies div.box:nth-child(7) div.percent svg circle:nth-child(2), body main .second .technologies div.box:nth-child(6) div.percent svg circle:nth-child(2), body main .second .technologies div.box:nth-child(5) div.percent svg circle:nth-child(2), body main .second .technologies div.box:nth-child(4) div.percent svg circle:nth-child(2), body main .second .technologies div.box:nth-child(3) div.percent svg circle:nth-child(2), body main .second .technologies div.box:nth-child(2) div.percent svg circle:nth-child(2) {
   fill: none;
   stroke: red;
   stroke-width: 5px;
-  stroke-dasharray: 350;
   stroke-dashoffset: 345;
-  animation: circle 2s forwards;
+  animation: circle 10s forwards;
 }
-body .technologies div.box div.image {
+body main .second .technologies box div.image, body main .second .technologies div.box:nth-child(8) div.image, body main .second .technologies div.box:nth-child(7) div.image, body main .second .technologies div.box:nth-child(6) div.image, body main .second .technologies div.box:nth-child(5) div.image, body main .second .technologies div.box:nth-child(4) div.image, body main .second .technologies div.box:nth-child(3) div.image, body main .second .technologies div.box:nth-child(2) div.image {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+body main .second .technologies div.box:nth-child(2) svg circle:nth-child(2) {
+  stroke-dasharray: 430;
+}
+body main .second .technologies div.box:nth-child(3) svg circle:nth-child(2) {
+  stroke-dasharray: 510;
+}
+body main .second .technologies div.box:nth-child(4) svg circle:nth-child(2) {
+  stroke-dasharray: 490;
+}
+body main .second .technologies div.box:nth-child(5) svg circle:nth-child(2) {
+  stroke-dasharray: 575;
+}
+body main .second .technologies div.box:nth-child(6) svg circle:nth-child(2) {
+  stroke-dasharray: 600;
+}
+body main .second .technologies div.box:nth-child(7) svg circle:nth-child(2) {
+  stroke-dasharray: 400;
+}
+body main .second .technologies div.box:nth-child(8) svg circle:nth-child(2) {
+  stroke-dasharray: 590;
+}
+body main .third {
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 50px;
+}
+body main .third div a,
+body main .third div {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 20px;
 }
 body footer {
-  background: url(/assets/img/wave.svg);
+  background: url("../assets/img/wave.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 -540px;
+  background-position: bottom;
   height: 300px;
-  overflow: hidden;
-  margin-top: 150px;
-}
-body footer div.relation {
-  margin: auto;
-  width: 60%;
-  height: 200px;
+  margin-top: 50px;
+  padding-bottom: 30px;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-body footer div.relation div.contact {
-  width: 150px;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
+  align-items: end;
   justify-content: center;
-  align-items: center;
-  color: white;
-}
-body footer div.relation div.contact img {
-  width: 48px;
-  margin: 0 auto;
-  margin-bottom: 10px;
-}
-body footer div.parent {
-  width: 100%;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  padding-top: 65px;
-}
-body footer div.parent span {
-  color: white;
+  color: #001220;
 }
 
+@media only screen and (max-width: 1024px) {
+  body main {
+    padding: 0 25px;
+  }
+  body main .first header section section {
+    width: 0;
+  }
+  body main .first header section .wai {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  body main {
+    padding: 0 10px;
+    overflow: hidden;
+  }
+  body main .first header section .wai {
+    padding: 10px;
+  }
+  body main .first header section .wai .title {
+    font-size: 35px;
+  }
+  body main .second .technologies div.box {
+    margin: 0 10px 10px 10px !important;
+  }
+  body main .second .technologies .title {
+    font-size: 30px;
+  }
+  body main .second .technologies .title span.puce-nombre {
+    margin-right: 5px;
+  }
+  body main .third {
+    flex-wrap: wrap;
+    row-gap: 75px;
+  }
+  body main .third div a,
+  body main .third div {
+    row-gap: 20px;
+  }
+  body footer {
+    padding-bottom: 10px;
+  }
+  .desktop-menu ul {
+    display: none;
+  }
+  .desktop-menu img {
+    display: initial;
+    transition: 200ms;
+  }
+  .desktop-menu img:active {
+    transform: scale(0.8);
+    transition: 200ms;
+  }
+}
 @keyframes circle {
   to {
     stroke-dashoffset: 280;
@@ -223,13 +343,13 @@ body footer div.parent span {
 }
 @keyframes agitation-1 {
   0% {
-    top: 50px;
+    top: 0px;
   }
   50% {
-    top: 40px;
+    top: 30px;
   }
   100% {
-    top: 50px;
+    top: 0%;
   }
 }
 @keyframes agitation-2 {
@@ -237,7 +357,7 @@ body footer div.parent span {
     left: 200px;
   }
   50% {
-    left: 210px;
+    left: 230px;
   }
   100% {
     left: 200px;
@@ -245,13 +365,13 @@ body footer div.parent span {
 }
 @keyframes agitation-3 {
   0% {
-    top: 250px;
+    top: 220px;
   }
   50% {
-    top: 240px;
+    top: 250px;
   }
   100% {
-    top: 250px;
+    top: 220px;
   }
 }
 
