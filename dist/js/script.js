@@ -1,5 +1,5 @@
 var menu = document.querySelector(".desktop-menu img")
-
+var overlay = document.querySelector('.overlay')
 menu.addEventListener('click', ()=>{
-    console.log("menu clicked")
+    overlay.classList.toggle('active')
 })
